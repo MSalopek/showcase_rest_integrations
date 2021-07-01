@@ -1,0 +1,37 @@
+{
+    "Username": "<insert_credentials>",
+    "Password": "<insert_credentials>",
+    "CompanyID": "<insert_credentials>",
+    "SoftwareId": "<insert_credentials>",
+    "baseURL": "https://api.moj-eracun.hr/",
+    "ping": "https://api.moj-eracun.hr/Exchange/Ping/",
+    "apiVersion": "/apis/v2/",
+    "REST": {
+        "queryInbox": ["queryInbox", "POST"],
+        "queryOutbox": ["queryOutbox", "POST"],
+        "receive": ["receive", "POST"],
+        "send": ["send", "POST"],
+        "markPaid": ["markPaid", "POST"],
+        "notifyImport": ["notifyimport/{}", "POST"],
+        "updateDocumentStatus": ["UpdateDokumentProcessStatus", "POST"],
+        "documentAction": ["documentAction", "POST"],
+        "queryProcessingInbox": ["queryDocumentProcessStatusInbox", "POST"],
+        "queryProcessingOutbox": ["queryDocumentProcessStatusOutbox", "POST"]
+    }, 
+    "documentStatus": {
+        "10": "In preparation - Document is successfully uploaded, but pending validation and sending",
+        "20": "In validation - Document is successfully uploaded, pending recipient company data validation",
+        "30": "Sent - Document is successfully uploaded, digitally signed and time stamped. Notification email is sent to customer.",
+        "40": "Delivered – Customer accepted and downloaded digital invoice",
+        "45": "Canceled - Sender canceled digital invoicing process, as customer didn't accept invoice. Customer can no longer download document.",
+        "50": "Unsuccessful – Customer did not download invoice in 5 days – from this point usual flow is to resend document"
+    },
+    "documentProcessStatus": {
+        "0": "APPROVED - Document is successfully approved by the recepient",
+        "1": "REJECTED - Document is rejected by the recepient",
+        "2": "PAYMENT_FULFILLED - Document is fully paid",
+        "3": "PAYMENT_PARTIALLY_FULLFILLED – Document is partially paid",
+        "4": "RECEIVING_CONFIRMED – Document successfully downloaded by the recepient",
+        "99": "RECEIVED – Document received in the inbox of the recepient (e.g. FINA service)"
+    }
+}

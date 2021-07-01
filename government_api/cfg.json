@@ -1,0 +1,18 @@
+{
+    "Username": "<insert_credentials>",
+    "Password": "<insert_credentials>",
+    "Token": "<insert_credentials>",
+    "AuthURL": "https://matice-api-test.mzo.hr/api/Authorize/LazyAuthenticate",
+    "ResourceHandlers": {
+        "GetDjelatnik": "https://matice-api-test.mzo.hr/api/Djelatnik",
+        "GetDjelatnikOIB": "https://matice-api-test.mzo.hr/api/Djelatnik/OIB",
+        "GetMjesta": "https://matice-api-test.mzo.hr/api/Mjesta",
+        "GetUcenici":"https://matice-api-test.mzo.hr/api/Ucenik/GetFromUstanova",
+        "GetUcenikOIB": "https://matice-api-test.mzo.hr/api/Ucenik/",
+        "GetOdjeljenja": "https://matice-api-test.mzo.hr/Odjeljenja",
+        "GetSkolskeGodine": "https://matice-api-test.mzo.hr/api/SkolskeGodine",
+        "GetRazredi": "https://matice-api-test.mzo.hr/api/Razredi"
+    },
+    "ConnectTimeout": 30,
+    "ReadTimeout": 30
+}
